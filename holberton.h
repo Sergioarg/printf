@@ -7,12 +7,6 @@
 #include <string.h>
 #include <stdarg.h>
 
-typedef struct handleSpecifier
-{
-	char c;
-	int (*f)(va_list percent);
-} con_spe;
-
 int _printf(const char *format, ...);
 void _putchar(char character);
 int sing_char(char c);
