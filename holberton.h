@@ -7,6 +7,13 @@
 #include <string.h>
 #include <stdarg.h>
 
+/**
+* struct handleSpecifier - handle the conversion
+* specifiers
+* @c: conversion specifier passed with arguments
+* @f: function
+*/
+
 typedef struct handleSpecifier
 {
 	char c;
@@ -21,5 +28,6 @@ int (*conversion_specifiers(char c))();
 char *str_concat(char *s1, char *s2);
 int str_char(va_list selector);
 int percent_sign(va_list selector);
+int print_integer(va_list selector);
 
 #endif

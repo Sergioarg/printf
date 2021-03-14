@@ -6,6 +6,8 @@ int (*conversion_specifiers(char c))()
   	{'c', sing_char},
 	{'s', str_char},
     {'%', percent_sign},
+	{'d', print_integer},
+	{'i', print_integer},
 	{'\0', NULL}
 	};
 	int i = 0;
