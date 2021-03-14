@@ -1,48 +1,32 @@
 #include "holberton.h"
-
 /**
- * _printf - Print Anything (integers, strings, floats, doubles , etc)
- * @format: The part of string
- * Also recive a variadic arguments
- * Return: 0 always
-*/
+ * _printf - replica of the Printf function
+ * @format: references to the desired format to Print
+ * Return: Always 0.
+ */
+
 int _printf(const char *format, ...)
 {
 	int i, j, len;
-	char *tmp;
 	va_list arguments;
+	int (*selector)(va_list);
 
 	if (!format)
-		return (0);
+		return (-1);
+
 	va_start(arguments, format);
+
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%')
-			{
-				_putchar('%');
-				_putchar('\n');
-				i++;
-			}
-			else if (format[i + 1] == 'c')
-			{
-				_putchar(va_arg(arguments, int));
-				_putchar('\n');
-				i++;
-			}
-			else if (format[i + 1] == 's')
-			{
-				tmp = va_arg(arguments, char *);
-				for (j = 0; tmp[j]; j++)
-					_putchar(tmp[j]);
-				i++;
-			}
-			else
-				_putchar(format[i]);
+			selector = conversion_specifiers(format[i + 1]);
+			selector(arguments);
+			i++;
 		}
 		else
 			_putchar(format[i]);
 	}
+	va_end(arguments);
 	return (0);
 }
