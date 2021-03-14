@@ -1,0 +1,39 @@
+.\" Manpage for nuseradd.
+
+.TH man 8 "13 March 2020" "1.0" "_printf man page"
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+_printf [FORMAT] [ARGUMENT]
+
+_printf OPTION
+
+
+.SH DESCRIPTION
+ Print  ARGUMENT(s) according to FORMAT, or execute according to
+       OPTION:
+
+        --help display this help and exit
+
+       --version
+              output version information and exit
+
+.SH OPTIONS
+
+Add the options while we are working on them.
+
+.SH SEE ALSO
+useradd(8), passwd(5), nuseradd.debian(8)
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHOR
+Sergio Ramos (sergio_ramos53@yahoo.com)
+
+Manuel Bedoya (add email)
+
+Jean Pierre Ballen (add email)
+
+
