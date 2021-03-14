@@ -1,6 +1,6 @@
 .\" Manpage for _printf.
 
-.TH man 8 "13 March 2020" "1.0" "_printf man page"
+.TH man 3 "13 March 2020" "1.0" "_printf man page"
 .SH NAME
 _printf \- format and print data
 
