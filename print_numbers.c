@@ -18,9 +18,8 @@ int _abs(int r)
  */
 void print_integerRecursive(int n)
 {
-	if (n == 0)
+	if (n == '\0')
 		return;
-
 	else
 	{
 		print_integerRecursive(n / 10);
