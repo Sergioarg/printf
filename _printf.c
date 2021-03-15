@@ -2,7 +2,7 @@
 /**
  * _printf - replica of the Printf function
  * @format: references to the desired format to Print
- * Return: Always 0.
+ * Return: length of string
  */
 
 int _printf(const char *format, ...)
