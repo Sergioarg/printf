@@ -7,7 +7,7 @@
 
 int _printf(const char *format, ...)
 {
-	int i, countp = 0, len = 0;
+	int i, len = 0;
 	int *p;
 	va_list arguments;
 	int (*selector)(va_list, int*);
@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 			selector = conversion_specifiers(format[i + 1]);
 			selector(arguments, p);
 			i++;
-			countp++;
 		}
 		else
 		{
@@ -35,6 +34,6 @@ int _printf(const char *format, ...)
 	}
 	va_end(arguments);
 
-	return (len - countp);
+	return (len);
 
 }
