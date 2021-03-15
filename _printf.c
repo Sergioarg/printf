@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			_putchar(format[i]);
+			putchar_func(format[i]);
 			*p = *p + 1;
 		}
 	}
