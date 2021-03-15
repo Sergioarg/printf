@@ -1,19 +1,14 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
-#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string.h>
 #include <stdarg.h>
-
 /**
-* struct handleSpecifier - handle the conversion
-* specifiers
-* @c: conversion specifier passed with arguments
-* @f: function
-*/
-
+ * struct handleSpecifier - define the alias of struct
+ * @c: is the char that receives the format
+ * @f: is the name of the fuction
+ */
 typedef struct handleSpecifier
 {
 	char c;
@@ -28,5 +23,7 @@ int (*conversion_specifiers(char c))();
 int str_char(va_list selector, int *p);
 int percent_sign(va_list selector, int *p);
 int print_integer(va_list selector, int *p);
+int _abs(int r);
+void print_integerRecursive(int n);
 
 #endif
