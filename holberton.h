@@ -17,7 +17,7 @@ typedef struct handleSpecifier
 
 
 int _printf(const char *format, ...);
-int _putchar(char character);
+int putchar_func(char character);
 int sing_char(va_list selector, int *p);
 int (*conversion_specifiers(char c))();
 int str_char(va_list selector, int *p);
