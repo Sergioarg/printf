@@ -31,6 +31,11 @@ int _printf(const char *format, ...)
 				i++;
 
 			selector = conversion_specifiers(format[i + 1]);
+			if (selector == NULL)
+			{
+				putchar_func(format[i]);
+				continue;
+			}
 			selector(arguments, p);
 			i++;
 		}

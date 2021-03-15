@@ -23,11 +23,18 @@ int sing_char(va_list selector, int *p)
 
 int str_char (va_list selector, int *p)
 {
-	char *s = va_arg(selector, char *);
+	char *s = va_arg(selector, char *), *null = "(null)";
 	int i;
 
-	if (*s == '\0')
+	if (s == NULL)
+	{
+		while (i < 6)
+		{
+			putchar_func(null[i]);
+			i++;
+		}
 		return (-1);
+	}
 
 	if (*s == '%')
 		return (-1);
