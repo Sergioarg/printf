@@ -7,26 +7,30 @@
 
 int _printf(const char *format, ...)
 {
-	int i, j, len;
+	int i, j, countp = 0, len = 0;
+	int *p;
 	va_list arguments;
-	int (*selector)(va_list);
+	int (*selector)(va_list, int*);
 
 	if (!format)
 		return (-1);
 
 	va_start(arguments, format);
+	p = &len;
 
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
 			selector = conversion_specifiers(format[i + 1]);
-			selector(arguments);
+			selector(arguments, p);
 			i++;
+			countp++;
 		}
 		else
 			_putchar(format[i]);
+			*p = *p + 1;
 	}
 	va_end(arguments);
-	return (0);
+	return (len - countp);
 }
