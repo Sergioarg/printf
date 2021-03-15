@@ -6,6 +6,6 @@
  */
 int putchar_func(char character)
 {
-	write(1, &character, 1)
+	write(1, &character, 1);
 	return (1);
 }
