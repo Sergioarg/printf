@@ -35,8 +35,9 @@ void print_integerRecursive(int n)
  */
 int print_integer(va_list selector, int *p)
 {
-	(void)p;
 	int number = va_arg(selector, int);
+
+	(void)p;
 
 	if (number < 0)
 	{
