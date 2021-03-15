@@ -31,6 +31,7 @@ int str_char (va_list selector, int *p)
 		while (i < 6)
 		{
 			putchar_func(null[i]);
+			*p = *p + 1;
 			i++;
 		}
 		return (-1);
