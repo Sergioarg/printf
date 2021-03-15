@@ -17,7 +17,7 @@
 typedef struct handleSpecifier
 {
 	char c;
-	int (*f)(va_list arguments);
+	int (*f)(va_list arguments, int *p);
 } con_spe;
 
 
