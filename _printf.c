@@ -20,8 +20,16 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == ' ' && format[i + 2] == '\0')
+			return (-1);
+		if (format[i] == '%' && format[i + 1] == '\0')
+			return (-1);
+
+		else if (format[i] == '%')
 		{
+			while (format[i + 1] == ' ')
+				i++;
+
 			selector = conversion_specifiers(format[i + 1]);
 			selector(arguments, p);
 			i++;
