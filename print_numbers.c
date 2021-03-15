@@ -24,7 +24,7 @@ void print_integerRecursive(int n)
 	else
 	{
 		print_integerRecursive(n / 10);
-		_putchar(n % 10 + '0');
+		putchar_func(n % 10 + '0');
 	}
 }
 /**
@@ -40,7 +40,7 @@ int print_integer(va_list selector, int *p)
 
 	if (number < 0)
 	{
-		_putchar('-');
+		putchar_func('-');
 		number = _abs(number);
 	}
 	print_integerRecursive(number);
