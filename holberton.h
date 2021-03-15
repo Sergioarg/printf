@@ -23,11 +23,11 @@ typedef struct handleSpecifier
 
 int _printf(const char *format, ...);
 int _putchar(char character);
-int sing_char(va_list selector);
+int sing_char(va_list selector, int *p);
 int (*conversion_specifiers(char c))();
 char *str_concat(char *s1, char *s2);
-int str_char(va_list selector);
-int percent_sign(va_list selector);
-int print_integer(va_list selector);
+int str_char(va_list selector, int *p);
+int percent_sign(va_list selector, int *p);
+int print_integer(va_list selector, int *p);
 
 #endif
