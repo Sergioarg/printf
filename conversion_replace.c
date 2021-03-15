@@ -49,6 +49,7 @@ int str_char (va_list selector, int *p)
 
 int percent_sign(va_list selector, int *p)
 {
+	(void)selector;
 	_putchar('%');
 	*p = *p + 1;
 	return (0);
