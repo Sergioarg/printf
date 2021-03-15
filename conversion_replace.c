@@ -9,7 +9,7 @@
 
 int sing_char(va_list selector, int *p)
 {
-	_putchar(va_arg(selector, int));
+	putchar_func(va_arg(selector, int));
 	*p = *p + 1;
 	return (0);
 }
@@ -34,7 +34,7 @@ int str_char (va_list selector, int *p)
 
 	for (i = 0; s[i]; i++)
 	{
-		_putchar(s[i]);
+		putchar_func(s[i]);
 		*p = *p + 1;
 	}
 	return (i);
@@ -50,7 +50,7 @@ int str_char (va_list selector, int *p)
 int percent_sign(va_list selector, int *p)
 {
 	(void)selector;
-	_putchar('%');
+	putchar_func('%');
 	*p = *p + 1;
 	return (0);
 }
