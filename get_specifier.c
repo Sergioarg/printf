@@ -10,7 +10,7 @@ int (*conversion_specifiers(char c))()
 	int i = 0;
 
 	con_spe cs_arr[] = {
-		{'c', sing_char},
+		// {'c', sing_char},
 		{'s', str_char},
 		{'d', print_integer},
 		{'i', print_integer},

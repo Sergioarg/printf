@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-int sing_char(va_list selector, int *p)
+int sing_char(va_list selector)
 {
 	char character = va_arg(selector, int);
 

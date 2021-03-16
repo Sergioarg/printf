@@ -7,16 +7,16 @@
 int _printf(const char *format, ...)
 {
 	int i, len = 0;
-	int *p;
+	/* int *p; */
 	va_list arguments;
 
-	int (*selector)(va_list, int *);
+	/* int (*selector)(va_list, int *p); */
 
 	if (!format || (format[0] == '&' && format[1] == '\0'))
 		return (-1);
 
 	va_start(arguments, format);
-	p = &len;
+	/* p = &len; */
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')

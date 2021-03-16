@@ -56,7 +56,6 @@ int print_integer(va_list selector, int *p)
 {
 	int number = va_arg(selector, int);
 
-	int i = 0;
 
 	if (number == '.')
 	{
