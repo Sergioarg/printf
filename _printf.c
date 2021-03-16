@@ -6,16 +6,16 @@
  */
 int _printf(const char *format, ...)
 {
-	int i, len = 0;
+	unsigned int i, len = 0;
 	/* int *p; */
 	va_list arguments;
 
 	/* int (*selector)(va_list, int *p); */
+	va_start(arguments, format);
 
 	if (!format || (format[0] == '&' && format[1] == '\0'))
 		return (-1);
 
-	va_start(arguments, format);
 	/* p = &len; */
 	for (i = 0; format[i] != '\0'; i++)
 	{
