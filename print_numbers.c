@@ -41,37 +41,6 @@ int print_integerRecursive(int n, int *p)
 		print_integerRecursive(n / 10, p);
 		*p = *p + 1;
 		putchar_func((n % 10) + '0');
-
 	}
 	return (1);
 }
-/**
- * print_integer - Print in the format of integers
- * @selector: condition that you are going to print
- * @p: to use
- * Return: Always 0.
- */
-/* int print_integer(va_list selector, int *p)
-{
-	int number = va_arg(selector, int);
-
-	if (number == ' ')
-		return (-1);
-
-	if (number == '\0')
-	{
-		putchar_func('0');
-		return (1);
-	}
-
-	if (number < 0)
-	{
-		putchar_func('-');
-		number = _abs(number);
-	}
-	integer_evaluator(number);
-	print_integerRecursive(number, p);
-
-	return (1);
-}
- */

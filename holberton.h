@@ -7,13 +7,13 @@
 #include <stdio.h>
 /**
  * struct handleSpecifier - define the alias of struct
- * @c: is the char that receives the format
+ * @co: is the char that receives the format
  * @f: is the name of the fuction
  */
 typedef struct con_spee
 {
-    char *co;
-    int (*f)(va_list);
+	char *co;
+	int (*f)(va_list);
 } con_spe;
 
 int _printf(const char *format, ...);
