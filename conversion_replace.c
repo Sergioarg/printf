@@ -9,9 +9,10 @@
 
 int sing_char(va_list selector, int *p)
 {
-	putchar_func(va_arg(selector, int));
-	*p = *p + 1;
-	return (0);
+	char character = va_arg(selector, int);
+
+	putchar_func(character);
+	return (1);
 }
 
 /**
@@ -28,6 +29,7 @@ int str_char (va_list selector, int *p)
 
 	if (s == NULL)
 	{
+		/* Pedir explicacion a Manuel. Aiudaaaaaaa!!! */
 		while (i < 6)
 		{
 			putchar_func(null[i]);
@@ -46,19 +48,4 @@ int str_char (va_list selector, int *p)
 		*p = *p + 1;
 	}
 	return (i);
-}
-
-/**
- * percent_sign - print a single percentage
- * @selector: condition that you are going to print
- * @p: is the length of the string
- * Return: Always 0.
- */
-
-int percent_sign(va_list selector, int *p)
-{
-	(void)selector;
-	putchar_func('%');
-	*p = *p + 1;
-	return (0);
 }

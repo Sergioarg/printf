@@ -12,7 +12,6 @@ int (*conversion_specifiers(char c))()
 	con_spe cs_arr[] = {
 		{'c', sing_char},
 		{'s', str_char},
-		{'%', percent_sign},
 		{'d', print_integer},
 		{'i', print_integer},
 		{'\0', NULL}

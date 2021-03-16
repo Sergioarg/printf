@@ -1,8 +1,10 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 
+
 #include <unistd.h>
 #include <stdarg.h>
+
 /**
  * struct handleSpecifier - define the alias of struct
  * @c: is the char that receives the format
@@ -23,6 +25,6 @@ int str_char(va_list selector, int *p);
 int percent_sign(va_list selector, int *p);
 int print_integer(va_list selector, int *p);
 int _abs(int r);
-void print_integerRecursive(int n);
+int print_integerRecursive(int n, int *p);
 
 #endif
