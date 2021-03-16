@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * integer_evaluator - evaluates what kind of integer is
  * @n: is the integer to evalue
@@ -55,12 +54,6 @@ int print_integerRecursive(int n, int *p)
 int print_integer(va_list selector, int *p)
 {
 	int number = va_arg(selector, int);
-
-
-	if (number == '.')
-	{
-		printf("ayuda");
-	}
 
 	if (number == ' ')
 		return (-1);
