@@ -7,12 +7,11 @@
  * Return: Always 0.
  */
 
-int sing_char(va_list selector)
+int sing_char(va_list c)
 {
-	char character = va_arg(selector, int);
-
-	putchar_func(character);
-	return (1);
+    char character = (char)va_arg(c, int);
+    putchar_func(character);
+    return (1);
 }
 
 /**
@@ -22,30 +21,19 @@ int sing_char(va_list selector)
  * Return: The iterator to count.
  */
 
-int str_char (va_list selector, int *p)
+int str_char(va_list s)
 {
-	char *s = va_arg(selector, char *), *null = "(null)";
-	int i;
+    char *string;
+    int i;
 
-	if (s == NULL)
-	{
-		/* Pedir explicacion a Manuel. Aiudaaaaaaa!!! */
-		while (i < 6)
-		{
-			putchar_func(null[i]);
-			*p = *p + 1;
-			i++;
-		}
-		return (-1);
-	}
-
-	if (*s == '%')
-		return (-1);
-
-	for (i = 0; s[i]; i++)
-	{
-		putchar_func(s[i]);
-		*p = *p + 1;
-	}
-	return (i);
+    string = va_arg(s, char *);
+    if (string == NULL)
+    {
+        string = "(null)";
+    }
+    for (i = 0; string[i] != '\0'; i++)
+    {
+        putchar_func(string[i]);
+    }
+    return (i);
 }

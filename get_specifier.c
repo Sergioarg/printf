@@ -5,23 +5,23 @@
  * Return: NULL.
  */
 
-int (*conversion_specifiers(char c))()
+int (*conversion_specifiers(const char *c, int l))(va_list)
 {
-	int i = 0;
+    int i = 0;
 
-	con_spe cs_arr[] = {
-		// {'c', sing_char},
-		{'s', str_char},
-		{'d', print_integer},
-		{'i', print_integer},
-		{'\0', NULL}
-	};
+    con_spe cs_arr[] = {
+        {"c", sing_char},
+        {"s", str_char},
+        {NULL, NULL}
+    };
 
-	while (cs_arr[i].c != '\0')
-	{
-		if (cs_arr[i].c == c)
-			return (cs_arr[i].f);
-		i++;
-	}
-	return (NULL);
+    for (i = 0; cs_arr[i].co != NULL; i++)
+    {
+        if (cs_arr[i].co[0] == c[l])
+        {
+            return (cs_arr[i].f);
+        }
+    }
+
+    return (NULL);
 }

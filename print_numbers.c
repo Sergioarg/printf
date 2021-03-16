@@ -51,7 +51,7 @@ int print_integerRecursive(int n, int *p)
  * @p: to use
  * Return: Always 0.
  */
-int print_integer(va_list selector, int *p)
+/* int print_integer(va_list selector, int *p)
 {
 	int number = va_arg(selector, int);
 
@@ -74,3 +74,4 @@ int print_integer(va_list selector, int *p)
 
 	return (1);
 }
+ */
