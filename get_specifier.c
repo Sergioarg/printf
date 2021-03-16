@@ -13,6 +13,8 @@ int (*conversion_specifiers(const char *c, int l))(va_list)
 	con_spe cs_arr[] = {
 		{"c", sing_char},
 		{"s", str_char},
+		{"i", print_integer},
+		{"d", print_integer},
 		{NULL, NULL}
 	};
 
