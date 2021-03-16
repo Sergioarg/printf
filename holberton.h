@@ -25,6 +25,6 @@ int (*conversion_specifiers(const char *c, int l))(va_list);
 int str_char(va_list s);
 int print_integer(va_list i);
 int print_integer(va_list d);
-int print_integerRecursive(int n);
+int print_integerRecursive(unsigned int n);
 
 #endif
