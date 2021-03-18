@@ -1,6 +1,6 @@
 # Printf. :pencil2:
 
-_In this repository you will find a replica of the PRINTF of C language function_.
+_In this repository you will find a copy about the operation of the ***printf*** function of the language C the output of each format will be given as the type of format entered_.
 
 ---
 
@@ -35,6 +35,12 @@ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c && ./a.out
         _printf("%c\n", '1');
         return (0);
     }
+```
+```c
+Outpus:
+    Output: Hello Word
+    Output: 123
+    Output: 1
 ```
 ---
 ### 📖 - Man Page

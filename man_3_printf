@@ -1,6 +1,6 @@
 .\" _printf(3) man page
 
-.TH _PRINTF(3) "2.0" "_printf man page"
+.TH _PRINTF(3) "2.0" "17 March 2021" "_printf man page"
 .SH NAME
 _printf \- format and print data
 
@@ -34,6 +34,10 @@ To specify the format you should first put one% then the type of format all insi
 
 		%i: Print an integers.
 
+.SH RETURN VALUE
+
+    Upon  successful  return,  these functions return the number of characters printed (excluding the null byte used to end output to strings).
+
 .SH STRUCTURE AND EXAMPLES
 
 These are some examples of how you can use _printf();
@@ -41,15 +45,19 @@ These are some examples of how you can use _printf();
 int main(void)
     {
 
-		Base structure:	    	_printf("%[FORMAT]", [ARGUMENT]);
+		Base structure:    	_printf("%[FORMAT]", [ARGUMENT]);
 
 		Print strings:		_printf("Hello World");
 
-		Print integers:		_printf("%d", 123);
+		Print integers:	_printf("%d", 123);
 
 		return (0);
 
     }
+
+	Output: Hello World
+
+	Output of %d : 123
 
 .SH AUTHORS
 Jean Pierre Ballen, Manuel Bedoya, Sergio Ramos - Cohort 14.
